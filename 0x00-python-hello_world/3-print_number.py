@@ -2,4 +2,4 @@
 number = 98
 
 #myCode
-print(f"{number} Battery street")
+print(f"{number:d} Battery street")
