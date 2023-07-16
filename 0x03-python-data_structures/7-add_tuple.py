@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
+#this is the code for task 7
 def add_tuple(tuple_a=(), tuple_b=()):
-    
+    """the instructions are available in the task question"""
 	if len(tuple_a) < 2:
 		if len(tuple_a) == 0:
 			tuple_a = 0, 0
