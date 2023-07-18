@@ -4,10 +4,9 @@ listint_t *reverse_listint(listint_t **head);
 int is_palindrome(listint_t **head);
 
 /**
-* reverse_listint - function for rev
-* @head:head pointer 
-*
-* Return: success
+* reverse_listint - the subroutine
+* @head: the beginning
+* Return: something if successful and something else if fail
 */
 listint_t *reverse_listint(listint_t **head)
 {
@@ -26,15 +25,15 @@ listint_t *reverse_listint(listint_t **head)
 }
 
 /**
-* is_palindrome - function for plinferome
-* @head: well this one is obvious
+* is_palindrome - pzalimdrome time 
+* @head: start here oo
 *
-* Return: something success
+* Return: something for success, something else for fail
 */
 int is_palindrome(listint_t **head)
 {
 	listint_t *p, *v, *d;
-	size_t e = 0, l;
+	size_t e = 0, i;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
@@ -47,14 +46,14 @@ int is_palindrome(listint_t **head)
 	}
 
 	p = *head;
-	for (l = 0; l < (e / 2) - 1; l++)
+	for (i = 0; i < (e / 2) - 1; i++)
 		p = p->next;
 
 	if ((e % 2) == 0 && p->n != p->next->n)
 		return (0);
 
 	p = p->next->next;
-	r = reverse_listint(&p);
+	v = reverse_listint(&p);
 	d = v;
 
 	p = *head;
