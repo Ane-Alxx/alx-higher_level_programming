@@ -8,7 +8,7 @@ def subby(ln):
 		if ml > n:
 			subb += n
 
-	return (max_list - to_sub)
+	return (ml - subb)
 
 
 def roman_to_int(roman_string):
