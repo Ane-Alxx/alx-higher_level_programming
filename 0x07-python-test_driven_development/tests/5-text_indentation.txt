@@ -1,0 +1,135 @@
+# Module: 5-text_indentation.txt
+
+================================
+How to Use 5-text_indentation.py
+================================
+
+this module is for the function text with text_indentation
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Test case, delimeters followed by spaces:
+    >>> text_indentation("Fingers   :     crossed    ?    coffee.    shop     ")
+    Fingers:
+    <BLANKLINE>
+    crossed?
+    <BLANKLINE>
+    coffee.
+    <BLANKLINE>
+    shop
+
+Test case, only using delimeters:
+    >>> text_indentation(".?:")
+    .
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test case, space followed by a string:
+    >>> text_indentation("    crossed")
+    crossed
+
+Test case, delimeters:
+    >>> text_indentation("  ?  ")
+    ?
+    <BLANKLINE>
+
+
+Test case, indent
+    >>> text_indentation("?Fingers.")
+    ?
+    <BLANKLINE>
+    Fingers.
+    <BLANKLINE>
+
+Test case, newline:
+    >>> text_indentation("?\n\n.\n\n:")
+    ?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test case, passing none:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+
+Test case, passing an integer:
+    >>> text_indentation(33)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Test case, string followed by spaces:
+    >>> text_indentation("        crossed          ")
+    crossed
+
+Test case, passing an empty string:
+    >>> text_indentation("")
+    >>> text_indentation("      ")
+
+Test case long string:
+    >>> text_indentation("Fingers: crossed")
+    Fingers:
+    <BLANKLINE>
+    crossed
+
+Test case, delimeter spaces:
+    >>> text_indentation("      ?:  :  ")
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Test case,  newline:
+    >>> text_indentation("\n")
+    <BLANKLINE>
+
+    >>> text_indentation("\n\n")
+    <BLANKLINE>
+    <BLANKLINE>
+
+    >>> text_indentation("Fingers\n\n")
+    Fingers
+    <BLANKLINE>
+
+Test case, no delimeters:
+    >>> text_indentation("Fingers crossed")
+    Fingers crossed
+
+Test case, strings:
+    >>> text_indentation("crossed    ")
+    crossed
+
+Test case delimeters without spaces:
+    >>> text_indentation("Fingers: crossed? coffee. shop")
+    Fingers:
+    <BLANKLINE>
+    crossed?
+    <BLANKLINE>
+    coffee.
+    <BLANKLINE>
+    shop
+
+Test case,delimeters spaced:
+    >>> text_indentation("Fingers   :   crossed  ?  coffee.  shop")
+    Fingers:
+    <BLANKLINE>
+    crossed?
+    <BLANKLINE>
+    coffee.
+    <BLANKLINE>
+    shop
