@@ -1,0 +1,96 @@
+# Module: 0-add_integer
+============================================
+How to use 0-add_integer.py
+============================================
+
+This module contains a single function ''add_integer()''
+
+Numbers
+=======
+
+``add_integer()`` function to return the sum of its arguments. For numbers, that value is equivalent to using the ``+``
+operator.
+
+Import the add_integer.
+    >>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(7, 2)
+	9
+
+Non-Numbers
+===========
+
+add_integer() works with integers or floats, so all arguments should be integers or floats.
+if there is a non integer or float a TypeError will be raised:
+
+Adding an integer and a float.
+	>>> add_integer(2, 5.0) #doctest: +REPORT_NDIFF
+	7
+
+Adding a float and an integer.
+	>>> add_integer(2.0, 3)
+	5
+
+Passing one argument.
+    >>> add_integer(1)
+    99
+
+Adding a positive and negative integer.
+    >>> add_integer(6, -4)
+    2
+
+Adding a negative and positive integer.
+    >>> add_integer(-8, 8)
+    0
+
+Adding an integer and a bool.
+    >>> add_integer(3, True)
+    4
+
+Adding a boolean value and integer.
+    >>> add_integer(True, 7)
+    8
+
+Adding two disimilar boolean values.
+    >>> add_integer(False, True)
+    1
+
+Adding two similar boolean values.
+    >>> add_integer(True, True)
+    2
+
+Passing in only a boolean value.
+    >>> add_integer(True, )
+    99
+
+Adding an integer and a boolean value.
+    >>> add_integer(9, False)
+    9
+
+Adding a boolean value and an integer.
+    >>> add_integer(False, 9)
+    9
+
+Adding two bools.
+    >>> add_integer(True, False)
+    1
+
+Passing invalid arguments:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(9, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+	>>> add_integer('a', 7)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer((), 8)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
