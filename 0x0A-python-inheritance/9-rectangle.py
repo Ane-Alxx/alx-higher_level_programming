@@ -6,6 +6,7 @@ for a trail of inheritance, instancing and
 object spawning.
 
 """
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
 	"""A class for base geometry for a rectangle"""
