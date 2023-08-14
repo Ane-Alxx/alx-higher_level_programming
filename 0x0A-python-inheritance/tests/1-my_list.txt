@@ -1,0 +1,67 @@
+============================================
+How to use 1-my_list.txt
+============================================
+
+This is a library for test casses using ''print_sorted()'' for sorting a list
+
+Test cases with numbers:
+========
+''print_sorted()'' is a function that returns a sorted lisrt.
+
+   >>> MyList = __import__('1-my_list').MyList
+   >>> my_list = MyList()
+   >>> isinstance(my_list, list)
+   True
+   >>> my_list.print_sorted()
+   []
+
+   >>> my_list.append(11)
+   >>> my_list.append(2)
+   >>> my_list.append(9)
+   >>> my_list.print_sorted()
+   [2, 9, 11]
+
+   >>> my_list.append(5)
+   >>> my_list.print_sorted()
+   [2, 5, 9, 11]
+
+   >>> my_list.append(-23)
+   >>> my_list.print_sorted()
+   [-23, 2, 5, 9, 11]
+
+   >>> my_list.append(-1)
+   >>> my_list.append(0)
+   >>> my_list.append(7)
+   >>> my_list.print_sorted()
+   [-23, -1, 0, 2, 5, 7, 9, 11]
+
+Test reset list and try random numbers:
+   >>> my_list.clear()
+   >>> my_list.append(1)
+   >>> my_list.append(4)
+   >>> my_list.append(0)
+   >>> my_list.append(5)
+   >>> my_list.append(1)
+   >>> my_list.print_sorted()
+   [0, 1, 1, 4, 5]
+
+   >>> my_list.append(999)
+   >>> my_list.print_sorted()
+   [0, 1, 1, 4, 5, 999]
+
+Test case with a string:
+   >>> my_list.append(int('welp'))
+   Traceback (most recent call last):
+   ValueError: invalid literal for int() with base 10: 'welp'
+
+
+Test case with None:
+   >>> my_list.append(None)
+   >>> my_list.print_sorted()
+   Traceback (most recent call last):
+   TypeError: unorderable types: NoneType() < int()
+
+Test case with Null:
+   >>> my_list.append(NULL)
+   Traceback (most recent call last):
+   NameError: name 'NULL' is not defined
