@@ -6,9 +6,11 @@ Code script for:
 @
 
 """
-
+import urllib.request
+import urllib.error
 
 if __name__ == "__main__":
+	"""Just doing this again because being extra hurts no one"""
 	import sys
 	from urllib import request, error
 
